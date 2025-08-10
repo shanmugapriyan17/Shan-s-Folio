@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shan’s Folio</title>
+
+    <!-- Style_css -->
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media.css" />
+
+    <!-- icon -->
+
+    <link rel="icon" href="./img/boy.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zeyada&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="he_img" src="./img/p-removebg-preview (1).png" alt="img.." />
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      <ul type="none" class="he_ul" id="navbar">
+        <li><a href="#myvlog">MY VLOG</a></li>
+        <li><a href="#skill">SKILLS</a></li>
+        <li><a href="#story">MY STORY</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#footer">CONTACTS</a></li>
+        <li><a href="./SOCIAL-LINKS/sociallinks.html" target="_blank">CARD</a></li>
+      </ul>
+    </header>
+    </style>
+
+    <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navbar = document.getElementById("navbar");
+
+  // Toggle navbar when clicking menu icon
+  menuToggle.addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevent event bubbling to document
+    navbar.classList.toggle("active");
+  });
+
+  // Close navbar if clicking outside navbar or menuToggle
+  document.addEventListener("click", function(e) {
+    if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+      navbar.classList.remove("active");
+    }
+  });
+</script>
+
+    <div class="section" id="myvlog">
+      <div class="section-left">
+        <h1 class="h2" style="font-family: Poppins, sans-serif">
+          SHANMUGAPRIYAN<span class="Sto_sta_1">&nbsp;S</span>
+        </h1>
+        <section class="wrapper_body">
+          <div class="wrapper">
+            <div class="static_txt">I'm</div>
+            <ul class="dynamic_txts" >
+              <li><span>Photographer</span></li>
+              <li><span>Designer</span></li>
+              <li><span>Developer</span></li>
+              <li><span>Freelancer</span></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="section-right">
+        <img src="./img/IMG_1399.PNG" alt="avathar" />
+      </div>
+    </div>
+
+    <!-- section 2 -->
+    <div class="section1" id="skill">
+      <h2><span class="Sto_sta_1">S</span>KILLS IN</h2>
+      <span>_____</span>
+      <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="8"
+        id="textmarquee"
+        loop="infinite"
+      >
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          target="_blank"
+          ><img src="./img/html.png" alt="img"
+        /></a>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+          target="_blank"
+          ><img src="./img/css-3.png" alt="img"
+        /></a>
+        <a href="https://www.tpointtech.com/java-tutorial" target="_blank"
+          ><img src="./img/java.png" alt="img"
+        /></a>
+        <a href="https://www.w3schools.com/sql/" target="_blank"
+          ><img src="./img/database.png" alt="img"
+        /></a>
+        <a href="https://www.blockchain.com/" target="_blank"
+          ><img src="./img/blockchain.png" alt="img"
+        /></a>
+        <a href="https://www.tutorialspoint.com/word/index.htm" target="_blank"
+          ><img src="./img/word.png" alt="img"
+        /></a>
+        <a href="https://www.javascripttutorial.net/" target="_blank"
+          ><img src="./img/java-script.png" alt="img"
+        /></a>
+      </marquee>
+      <script>
+        const x = document.getElementById("textmarquee");
+        x.onmouseover = function () {
+          x.stop();
+        };
+        x.onmouseleave = function () {
+          x.start();
+        };
+      </script>
+    </div>
+
+    <!-- section 3 -->
+    <div class="story" id="story" style="font-family: Poppins, sans-serif">
+      <div class="story-left">
+        <h1>
+          THIS IS<br />
+          <span class="Sto_sta_1">MY</span> STORY
+        </h1>
+        <span class="sss">_____</span>
+        <p class="p1">
+          Enthusiastic IT graduate seeking to contribute to innovative projects
+          and solutions in a dynamic environment, with a strong commitment to
+          continuous learning and professional growth.
+        </p>
+        <h1 class="hobbies">HOBBIES</h1>
+        <span class="sss">_____</span>
+        <ul type="none" class="hob_ul">
+          <li>
+            <a
+              href="https://www.cambridgeincolour.com/photo-editing-tutorials.htm"
+              target="_blank"
+              >Photo Editing</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://screenpal.com/blog/tutorial/free-video-editor"
+              target="_blank"
+              >Video Editing</a
+            >
+          </li>
+          <li>
+            <a href="https://music.youtube.com/" target="_blank"
+              >Listening Music</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="story-right">
+        <h1 class="sto_r_edu">EDUCATION</h1>
+        <section class="sto_r_01" id="sto_right">
+          <h4>Amrita Vishwa Vidyapeetham</h4>
+          <p>2025&nbsp;-&nbsp;2027&nbsp;|&nbsp;Coimbatore, India.</p>
+          <ul>
+            <li>M.TECH&nbsp;-&nbsp;CSE</li>
+            <li class="sto_r_uli">Present</li>
+          </ul>
+        </section>
+        <section class="sto_r_02" id="sto_right">
+          <h4>Goverment College Of Enginnering</h4>
+          <p>2020&nbsp;-&nbsp;2024&nbsp;|&nbsp;Erode, India.</p>
+          <ul>
+            <li>B.TECH&nbsp;-&nbsp;IT</li>
+            <li class="sto_r_uli">8.02</li>
+          </ul>
+        </section>
+        <section class="sto_r_03" id="sto_right">
+          <h4>Rajavignesh Higher Secondary School</h4>
+          <p>2019&nbsp;-&nbsp;2020&nbsp;|&nbsp;Melamathur, India.</p>
+          <ul>
+            <li>HSC&nbsp;-&nbsp;XII</li>
+            <li class="sto_r_uli">74%</li>
+          </ul>
+        </section>
+        <section class="sto_r_04" id="sto_right">
+          <h4>Arignar Anna Higher Secondary School</h4>
+          <p>2017&nbsp;-&nbsp;2018&nbsp;|&nbsp;Sendurai, India.</p>
+          <ul>
+            <li>SSLC&nbsp;-&nbsp;X</li>
+            <li class="sto_r_uli">78%</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- section 3 -->
+    <section class="sec-3">
+      <h2>CERTIFICATE<span class="Sto_sta_1">S</span></h2>
+      <center><span class="ss1">_____</span></center>
+      <section class="cer">
+        <div class="cer_sec">
+          <img src="./img/Fullstackpython.jpg" alt="image" />
+          <div class="cont-cer">
+            <p>Full Stack with Python&nbsp;-&nbsp;Guvi</p>
+            <a href="./img/Fullstackpython.jpg" download class="download-btn"
+              >Download</a
+            >
+          </div>
+        </div>
+        <div class="cer_sec">
+          <img src="./img/FullStack_cer.jpg" alt="image" />
+          <div class="cont-cer">
+            <p>Full Stack&nbsp;-&nbsp;Infosys</p>
+            <a href="./img/FullStack_cer.jpg" download class="download-btn"
+              >Download</a
+            >
+          </div>
+        </div>
+        <div class="cer_sec">
+          <img src="./img/Angular_cer.jpg" alt="image" />
+          <div class="cont-cer">
+            <p>Angular&nbsp;-&nbsp;Infosys</p>
+            <a href="./img/Angular_cer.jpg" download class="download-btn"
+              >Download</a
+            >
+          </div>
+        </div>
+        <div class="cer_sec">
+          <img src="./img/Nodejs_cer.jpg" alt="image" />
+          <div class="cont-cer">
+            <p>Node.js&nbsp;-&nbsp;Infosys</p>
+            <a href="./img/Nodejs_cer.jpg" download class="download-btn"
+              >Download</a
+            >
+          </div>
+        </div>
+        <div class="cer_sec">
+          <img src="./img/MongoDB_cer.jpg" alt="image" />
+          <div class="cont-cer">
+            <p>MongoDB&nbsp;Essentails&nbsp;-&nbsp;Infosys</p>
+            <a href="./img/MongoDB_cer.jpg" download class="download-btn"
+              >Download</a
+            >
+          </div>
+        </div>
+        <div class="cer_sec">
+          <img src="./img/Py&Ml - Copy.jpg" alt="image" />
+          <div class="cont-cer">
+            <p>Python&nbsp;Al&ML&nbsp;-&nbsp;ATS</p>
+            <a href="./img/Py&Ml.jpg" download class="download-btn">Download</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- section-4 -->
+    <section class="sec-4" id="experience">
+      <h1>My Experience & Project<span class="Sto_sta_1">S</span></h1>
+      <center><span class="ss1">_____</span></center>
+      <!-- Section 1: Internships -->
+      <h2>Internship<span class="Sto_sta_1">S</span></h2>
+      <div class="sec-4-int">
+        <div class="int">
+          <img src="./img/CC&SN_cer.jpg" alt="image" width="200" />
+          <p>Cloud Computing&nbsp;&&nbsp;System Networking</p>
+          <a href="./img/CC&SN_cer.jpg" download class="download-btn"
+            >Download</a
+          >
+        </div>
+        <div class="int">
+          <img src="./img/Fullstackjava.jpg" alt="Internship 2" width="200" />
+          <p>Full Stack Java</p>
+          <a href="./img/Fullstackjava.jpg" download class="download-btn"
+            >Download</a
+          >
+        </div>
+      </div>
+
+      <!-- Section 2: Projects -->
+      <h2>Project<span class="Sto_sta_1">S</span></h2>
+      <div class="sec-pro">
+        <details class="pro-det">
+          <summary>Text Encryption & Blockchain Implementation</summary>
+          <p>
+            Developed a program using hashing algorithms to encrypt text data
+            and implemented a basic blockchain structure to securely store and
+            verify data.
+          </p>
+        </details>
+        <details class="pro-det">
+          <summary>Blockchain Social Media Verification</summary>
+          <p>
+            Developed a blockchain-based app for verifying social media
+            profiles, using smart contracts and a custom algorithm to help
+            investigative agencies detect fake accounts.
+          </p>
+        </details>
+        <details class="pro-det">
+          <summary>
+            Bankist App — Money Transfer, Loan, Account Login | HTML , CSS , JS
+          </summary>
+          <p>
+            A fully functional web app where arrays were utilized extensively
+            for data management, including tracking transactions, accounts, and
+            loan conditions. Built using HTML, CSS, and JavaScript, focusing on
+            efficient data handling and user experience.
+          </p>
+        </details>
+        <details class="pro-det">
+          <summary>
+            Omnifood — Diet plan advertisement, responsive design | HTML , CSS
+          </summary>
+          <p>
+            A web application showcasing various diet plans and their details,
+            developed using HTML and CSS. Implemented responsiveness for all
+            screen sizes and utilized JavaScript for smooth scrolling when
+            navigating links. Added a form to collect user details, with Netlify
+            set up to handle submissions efficiently.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer id="footer">
+      <div class="fot">
+        <h1>CONTACT U<span class="Sto_sta_1">S</span></h1>
+        <span class="ss1">_____</span>
+
+        <div class="footer-container">
+          <!-- Left Side - Contact Form -->
+          <div class="fot_left">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Leave a message"></textarea>
+            <button type="submit">Submit</button>
+          </div>
+
+          <!-- Right Side - Contact Info -->
+          <div class="fot_right">
+            <div class="fot-item">
+              <div class="fot-circle" id="fot-circle">
+                <a href="mailto:cb.sc.p2cse25041@cb.students.amrita.edu"
+                  ><img class="fot-circle-img" src="./img/mail.png" alt="image"
+                /></a>
+              </div>
+            </div>
+            <div class="fot-item">
+              <div class="fot-circle" id="fot-circle">
+                <a href="tel:+919894982411"
+                  ><img
+                    class="fot-circle-img"
+                    src="./img/phone-call.png"
+                    alt="image"
+                /></a>
+              </div>
+            </div>
+            <div class="fot-item">
+              <div class="fot-circle" id="fot-circle">
+                <a
+                  href="https://maps.app.goo.gl/Dgweyg49NeVesTqN8"
+                  target="_blank"
+                  ><img class="fot-circle-img" src="./img/gps.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="fot-item " id="fot-item">
+              <div class="fot-circle">
+                <a href="#" target="_blank"
+                  ><img class="fot-circle-img" src="./img/social_mm.png" alt=""
+                /></a>
+              </div>
+              <div>
+                <h4>Social Profiles</h4>
+                <div class="fot_social-icons">
+                  <a
+                    href="https://www.youtube.com/@FullstackLearntime"
+                    target="_blank"
+                    ><img src="./img/youtube.png" alt="icon"
+                  /></a>
+                  <a
+                    href="https://www.instagram.com/shanmugapriyan_._17?igsh=MXZncnVtZnowdW82cg%3D%3D&utm_source=qr"
+                    target="_blank"
+                    ><img src="./img/video.png" alt="icon"
+                  /></a>
+                  <a href="https://x.com/20imt32?s=21" target="_blank"
+                    ><img src="./img/twitter.png" alt="icon"
+                  /></a>
+                  <a
+                    href="https://www.facebook.com/shanmugapriyan.sivakumar"
+                    target="_blank"
+                    ><img src="./img/social-media.png" alt="icon"
+                  /></a>
+                  <a
+                    href="https://www.linkedin.com/in/shanmugapriyan-s-ssp/"
+                    target="_blank"
+                  >
+                    <img src="./img/business.png" alt="icon"
+                  /></a>
+                  <a href="https://github.com/shanmugapriyan17" target="_blank"
+                    ><img src="./img/social (1).png" alt="icon"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="create" style="font-family: Poppins, sans-serif">
+          &copy; Created by Shanmugapriyan &nbsp;&nbsp;All right Reserved
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

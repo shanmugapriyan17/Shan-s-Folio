@@ -1,0 +1,403 @@
+@media (max-width: 600px) {
+  /* Make sure body and html take full width */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Header adjustments */
+  header {
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    padding-right: 35px;
+    background-color: #ffffff;
+  }
+
+  header .he_img {
+    transition: transform 1s ease;
+  }
+  header .he_img:hover {
+    transform: scale(1.1);
+    cursor: cell;
+  }
+
+  /* Show menu toggle button */
+  .menu-toggle {
+    display: block;
+    font-size: larger;
+    outline: none;
+    border: none;
+    color: #262e3b;
+    background-color: #ffffff;
+  }
+
+  /* Hide the navigation menu by default */
+  .he_ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    background: #ffffff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 10;
+    padding-bottom: 25px;
+  }
+
+  /* When active, show the menu */
+  .he_ul.active {
+    display: flex;
+  }
+
+  /* Nav links stack vertically */
+  .he_ul li a {
+    margin: 20px 0;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* Section layout stack vertically */
+  .section {
+    flex-direction: column;
+    height: 60vh;
+    padding: 20px 15px;
+  }
+  .section .h2 {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 100px;
+  }
+  .wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .wrapper .static_txt {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .wrapper .dynamic_txts {
+    margin-left: 5px;
+    height: 35px; /* height of one list item */
+    line-height: 35px;
+    overflow: hidden; /* clip the overflow */
+  }
+
+  .dynamic_txts li {
+    font-size: 30px;
+    height: 35px; /* same as container height */
+    line-height: 35px;
+    position: relative;
+    animation: slideMobile 12s steps(4) infinite;
+  }
+
+  @keyframes slideMobile {
+    100% {
+      top: -140px; /* 35px * 4 items */
+    }
+  }
+
+  .dynamic_txts li::after {
+    border-left: 2px solid #ff2d29;
+    animation: typingMobile 3s steps(10) infinite;
+    background-color: #212121;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+  }
+
+  @keyframes typingMobile {
+    40%,
+    60% {
+      left: calc(100% + 20px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+  /* Section left and right take full width */
+  .section-left,
+  .section-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Fix the image */
+  .section-right img {
+    position: relative;
+    right: 0;
+    top: 20px;
+    width: 1;
+    height: auto;
+    object-fit: contain;
+  }
+  /* section1 */
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 60px 20px; /* smaller padding left & right */
+    margin: 0 auto; /* center the section */
+    align-items: center;
+    background-color: #f0f0f0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .section1 h2,
+  .section1 h2 span {
+    font-size: 22px;
+    display: inline;
+    white-space: nowrap;
+  }
+
+  .section1 marquee {
+    display: flex;
+    padding: 20px 0; /* reduced padding */
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .section1 img {
+    width: 150px;
+    height: 165px;
+    background-color: #ffffff;
+    padding: 40px; /* less padding for images */
+    margin: 0 15px;
+    border-bottom: 5px solid #bf1e1c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    transition: ease-in-out 0.5s;
+  }
+
+  .section1 img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Story section stack */
+  .story {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 40px;
+  }
+
+  .story-left {
+    border-top: none;
+    border-right: none;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
+
+  .story-left h1,
+  .strory-left .Sto_sta_1 {
+    font-size: 1.5rem;
+  }
+
+  .story-left p {
+    padding-top: 15px;
+    font-size: 0.9rem;
+  }
+
+  .story-right {
+    padding: 20px 10px;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  .sto_r_edu {
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+
+  .sto_r_01,
+  .sto_r_02,
+  .sto_r_03,
+  .sto_r_04 {
+    margin: 10px 0;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  #sto_right h4,
+  #sto_right p {
+    padding: 5px 0;
+    font-size: 1rem;
+  }
+
+  #sto_right ul li {
+    padding-left: 5px;
+    font-size: 0.9rem;
+  }
+  .sss {
+    font-size: 1rem;
+  }
+  /* Certificate grid single column */
+  .sec-3 {
+    padding: 50px 20px;
+  }
+
+  .sec-3 h2 {
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+  }
+
+  .ss1 {
+    font-size: 1.8rem;
+  }
+
+  .cer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cer_sec {
+    padding: 10px;
+    margin: 10px 30px;
+    align-items: center;
+  }
+
+  .download-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  /* Internship section stack vertically */
+  .sec-4 {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .sec-4 h1,
+  .sec-4 h2 {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .sec-4-int {
+    flex-direction: column;
+    gap: 40px;
+
+    margin: 15px 25px;
+  }
+
+  .int {
+    width: 100%; /* full width on mobile */
+    max-width: 350px; /* optional max width */
+  }
+
+  .int p {
+    font-size: 12px;
+    top: 35%;
+  }
+
+  .int a {
+    padding: 3px 16px;
+    bottom: 40%;
+  }
+
+  .sec-pro {
+    width: 95%;
+    gap: 20px;
+    padding: 5px 10px;
+  }
+
+  .sec-pro details {
+    padding: 10px;
+  }
+
+  .sec-pro summary {
+    font-size: 1rem;
+    padding: 4px 0;
+  }
+
+  .sec-pro p {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  /* Footer containers stack */
+  footer {
+    padding: 20px 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .fot_left,
+  .fot_right {
+    max-width: 100%;
+    min-width: 100%;
+    flex-direction: column;
+  }
+
+  /* Improved right side */
+  .fot_right {
+    gap: 30px;
+    justify-content: flex-start; /* Align items to start */
+  }
+
+  .fot-item {
+    width: 100%; /* Full width */
+
+    justify-content: center; /* Align icon and text to left */
+    gap: 15px;
+  }
+
+  .fot-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .fot-circle a {
+    font-size: 1rem;
+  }
+  #fot-circle {
+    width: 200px;
+  }
+
+  .fot-circle-img,
+  .fot_social-icons a img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .fot_left input,
+  .fot_left textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .fot_left button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .another-class {
+    padding: 50px;
+  }
+  .fot_left button:hover {
+    background: #bf1e1c;
+    transform: translateY(-2px);
+  }
+
+  .create {
+    font-size: 0.8rem;
+    padding-top: 15px;
+  }
+}

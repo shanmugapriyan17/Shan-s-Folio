@@ -34,9 +34,6 @@
     background-color: #ffffff;
   }
 
-  .section-right img {
-    overflow: hidden;
-  }
   /* Hide the navigation menu by default */
   .he_ul {
     display: none;
@@ -71,6 +68,7 @@
     flex-direction: column;
     height: 60vh;
     padding: 20px 15px;
+    overflow: hidden;
   }
   .section .h2 {
     font-size: 30px;
@@ -133,8 +131,11 @@
   .section-right {
     width: 100%;
     padding: 0;
+    overflow: hidden;
   }
-
+  .section-right img {
+    overflow: hidden;
+  }
   /* Fix the image */
   .section-right img {
     position: relative;

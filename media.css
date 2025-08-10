@@ -34,6 +34,9 @@
     background-color: #ffffff;
   }
 
+  .section-right img {
+    overflow: hidden;
+  }
   /* Hide the navigation menu by default */
   .he_ul {
     display: none;
